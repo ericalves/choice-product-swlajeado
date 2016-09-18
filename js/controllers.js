@@ -6,39 +6,19 @@
 /**
  * MainCtrl - controller
  */
-function MainCtrl() {
-
-   this.products = [{
-      name: 'Produto numero 1',
-      description: 'Esse produto issso isso e aqui bla-bla...',
-      imagem: 'https://ericalves.github.io/choice-product-swlajeado/img/products/1.jpg',
-      like: false,
-      notLike: false
-   },
-   {
-      name: 'Produto numero 2',
-      description: 'HUAH suhAns uA hsuhAUsesse produto issso isso e aqui bla-bla...',
-      imagem: 'https://ericalves.github.io/choice-product-swlajeado/img/products/2.jpg',
-      like: false,
-      notLike: false
-   }];
-
-   this.currentProduct = 0;
-};
-
 function ProductsController($scope, $window) {
 
    $scope.products = [{
       name: 'Produto numero 1',
       description: 'Esse produto issso isso e aqui bla-bla...',
-      image: '/img/products/1.jpg',
+      image: 'https://ericalves.github.io/choice-product-swlajeado/img/products/1.jpg',
       like: false,
       notLike: false
    },
    {
       name: 'Produto numero 2',
       description: 'HUAH suhAns uA hsuhAUsesse produto issso isso e aqui bla-bla...',
-      image: '/img/products/2.jpg',
+      image: 'https://ericalves.github.io/choice-product-swlajeado/img/products/2.jpg',
       like: false,
       notLike: false
    }];
