@@ -6,6 +6,10 @@
 /**
  * MainCtrl - controller
  */
+function MainCtrl() {
+
+};
+
 function ProductsController($scope, $window) {
 
    $scope.products = [{
