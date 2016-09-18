@@ -25,28 +25,41 @@
         <div class="row passwordBox animated fadeInDown ng-scope">
             <div class="col-lg-12" ng-show="viewAll() == false;">
                 <div class="ibox-content">
-                    <div class="row" ng-repeat="prod in products" class="animated fadeInRight" ng-show="$index == currentProduct">
-                        <h2 class="font-bold text-center">{{prod.name}}
-                        </h2>
-                        <!--
-                        <p>
-                            <small class="text-center">{{prod.description}}</small>
-                        </p>
-                        !-->
-                        <div class="col-lg-12">
-                            <a shref="#" title="Image from Unsplash" ng-click="openProd(prod);">
-                                <img src="{{prod.image}}" style='height: 100%; width: 100%; object-fit: contain'>
-                            </a>
+                    <div class="row">
+                        <div class="col-lg-12" ng-repeat="prod in products" ng-show="$index == currentProduct">
+                            <div class="row" class="animated fadeInRight">
+                                <h2 class="font-bold text-center">
+                                    {{prod.name}}
+                                </h2>
+                                <div class="col-lg-12">
+                                    <a shref="#" title="Image from Unsplash" ng-click="openProd(prod);">
+                                        <img src="{{prod.image}}" style='height: 100%; width: 100%; object-fit: contain'>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="row" style="margin-top: 10px;">
+                                <div class="col-lg-6">
+                                    <strong style="font-size: 20px;">{{ prod.price | currency: 'R$ ' }}</strong>
+                                </div>                     
+                                <div class="col-lg-6">
+                                    <div class="row" ng-repeat="cat in prod.categories">
+                                        <div class="col-lg-12">
+                                            <pre style="padding: 2px; padding-left: 10px; font-size: 10px; font-family: 'open sans', 'Helvetica Neue', Helvetica, Arial, sans-serif; margin: 1px;"><strong>{{cat}}</strong></pre>
+                                        </div>
+                                    </div>                                    
+                                </div>               
+                            </div>   
                         </div>
                     </div>
-                    <div class="row" style="margin-top: 20px;">
+                       
+                    <div class="row" style="margin-top: 10px;">
                         <div class="col-lg-6">
                             <button type="button" class="btn btn-primary block full-width m-b" ng-click="iLike();">Eu quero!</button>
                         </div>                     
                         <div class="col-lg-6 ">
                             <button type="button" class="btn btn-link block full-width m-b" ng-click="iNotLike();">Não quero</button>
                         </div>               
-                    </div>                
+                    </div>            
                 </div>
             </div>
 

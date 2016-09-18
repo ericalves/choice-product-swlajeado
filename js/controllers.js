@@ -13,40 +13,53 @@ function MainCtrl() {
 function ProductsController($scope, $window, $uibModal) {
 
    $scope.products = [{
-      name: 'Produto numero 1',
-      description: 'Esse produto issso isso e aqui bla-bla...',
-      image: 'https://ericalves.github.io/choice-product-swlajeado/img/products/1.jpg',
+      name: 'Tênis feminino',
+      description: '',
+      image: 'img/products/produto01_1.jpg',
       like: false,
-      url: 'https://www.google.com',
       notLike: false,
+      url: 'https://docs.google.com/forms/d/e/1FAIpQLSelXjdSNr_X-R_ZKj6j68VVChExnrV7FSWD4thJx6eKyW7Llg/viewform',
+      price: 179.90,
+      categories: ['Calçados femininos', 'Casual'],
         images: [
             {
-               url: 'https://ericalves.github.io/choice-product-swlajeado/img/products/1.jpg'
+               url: 'img/products/produto01_1.jpg'
             },
             {
-               url: 'https://ericalves.github.io/choice-product-swlajeado/img/products/2.jpg'
-            },
-            {
-               url: 'https://ericalves.github.io/choice-product-swlajeado/img/products/1.jpg'
+               url: 'img/products/produto01_2.jpg'
             }
       ]      
    },
    {
-      name: 'Produto numero 2',
-      description: 'HUAH suhAns uA hsuhAUsesse produto issso isso e aqui bla-bla...',
-      image: 'https://ericalves.github.io/choice-product-swlajeado/img/products/2.jpg',
+      name: 'Tênis masculino',
+      price: 149,
+      description: '',
+      image: 'img/products/produto02_1.jpg',
       like: false,
-      url: 'https://www.google.com',
+      url: 'https://docs.google.com/forms/d/e/1FAIpQLSdJkBIU2S40tLp8p_ZzDfRkx5TdWCIH7h6j1Uc7TFfb5FdxYw/viewform',
       notLike: false,
+      categories: ['Calçados masculinos', 'Casual', 'Tênis'],
         images: [
             {
-               url: 'https://ericalves.github.io/choice-product-swlajeado/img/products/2.jpg'
-            },
+               url: 'img/products/produto02_1.jpg'
+            }
+      ]          
+   },
+   {
+      name: 'Vestido',
+      price: 151.90,
+      description: 'Tamanho P',
+      image: 'img/products/produto03_1.jpg',
+      like: false,
+      url: 'https://docs.google.com/forms/d/e/1FAIpQLSduRvvqdqyS3K5QMg8b8OGpxDI3Zpi3YardW28N22gsby6PyA/viewform',
+      notLike: false,
+      categories: ['Vestidos', 'Moda feminina'],
+        images: [
             {
-               url: 'https://ericalves.github.io/choice-product-swlajeado/img/products/1.jpg'
-            },
+               url: 'img/products/produto03_1.jpg'
+            }, 
             {
-               url: 'https://ericalves.github.io/choice-product-swlajeado/img/products/2.jpg'
+               url: 'img/products/produto03_2.jpg'
             }
       ]          
    }
