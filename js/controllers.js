@@ -11,14 +11,14 @@ function MainCtrl() {
    this.products = [{
       name: 'Produto numero 1',
       description: 'Esse produto issso isso e aqui bla-bla...',
-      imagem: '/img/products/1.jpg',
+      imagem: 'https://ericalves.github.io/choice-product-swlajeado/img/products/1.jpg',
       like: false,
       notLike: false
    },
    {
       name: 'Produto numero 2',
       description: 'HUAH suhAns uA hsuhAUsesse produto issso isso e aqui bla-bla...',
-      imagem: '/img/products/2.jpg',
+      imagem: 'https://ericalves.github.io/choice-product-swlajeado/img/products/2.jpg',
       like: false,
       notLike: false
    }];
