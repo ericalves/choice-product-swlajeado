@@ -1,0 +1,71 @@
+<div class="wrapper wrapper-content animated fadeInRight" ng-controller="ProductsController">
+    <div class="row">
+        <div class="col-lg-12" ng-show="viewAll() == false;">
+            <div class="text-center m-t-lg">
+                <h1>
+                    O que você acha deste produto?
+                </h1>
+                <small>
+                    Vamos comprar?
+                </small>
+            </div>
+        </div>
+
+        <div class="col-lg-12"  ng-show="viewAll() == true;">
+            <div class="text-center m-t-lg">
+                <h1>
+                    Você viu todos os produtos disponiveis
+                </h1>
+                <small>
+                    Desejar ver novamente?
+                </small>
+            </div>
+        </div>        
+
+        <div class="row passwordBox animated fadeInDown ng-scope">
+            <div class="col-lg-12" ng-show="viewAll() == false;">
+                <div class="ibox-content">
+                    <div class="row" ng-repeat="prod in products" class="animated fadeInRight" ng-show="$index == currentProduct">
+                        <h2 class="font-bold text-center">{{prod.name}}
+                        </h2>
+                        <!--
+                        <p>
+                            <small class="text-center">{{prod.description}}</small>
+                        </p>
+                        !-->
+                        <div class="col-lg-12">
+                            <a href="img/gallery/1.jpg" title="Image from Unsplash" data-gallery="">
+                                <img src="{{prod.image}}" style='height: 100%; width: 100%; object-fit: contain'>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="row" style="margin-top: 20px;">
+                        <div class="col-lg-6">
+                            <button type="button" class="btn btn-primary block full-width m-b" ng-click="iLike();">Eu quero!</button>
+                        </div>                     
+                        <div class="col-lg-6 ">
+                            <button type="button" class="btn btn-primary block full-width m-b" ng-click="iNotLike();">Não quero</button>
+                        </div>               
+                    </div>                
+                </div>
+            </div>
+
+            <div class="col-lg-12" ng-show="viewAll() == true;">
+                <div class="ibox-content">
+                    <div class="row" class="animated fadeInRight">
+                        <div class="col-lg-12">
+                            <a href="img/gallery/1.jpg" title="Image from Unsplash" data-gallery="">
+                                <img src="img/sad.png" style='height: 100%; width: 100%; object-fit: contain'>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="row" style="margin-top: 20px;">
+                        <div class="col-lg-12">
+                            <button type="button" class="btn btn-primary block full-width m-b" ng-click="begin();">Sim</button>
+                        </div>           
+                    </div>                
+                </div>
+            </div>            
+        </div>
+    </div>
+</div>

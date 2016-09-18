@@ -1,0 +1,52 @@
+<!-- Wrapper-->
+<div id="wrapper">
+
+    <!-- Navigation -->
+    <div ng-include="'views/common/navigation.html'"></div>
+
+    <!-- Page wraper -->
+    <!-- ng-class with current state name give you the ability to extended customization your view -->
+    <div id="page-wrapper" class="gray-bg {{$state.current.name}}">
+
+        <!-- Page wrapper -->
+        <div ng-include="'views/common/topnavbar.html'"></div>
+
+        <!-- Main view  -->
+        <div ui-view></div>
+
+    </div>
+    <!-- End page wrapper-->
+
+</div>
+<!-- End wrapper-->
+
+<script>
+        $( document ).ready(function() {
+        
+            $("body").addClass('boxed-layout');
+            $("body").addClass('mini-navbar');
+            SmoothlyMenu();
+    });
+
+    // Helper function - only for demo purpose
+    function SmoothlyMenu() {
+        if (!$('body').hasClass('mini-navbar') || $('body').hasClass('body-small')) {
+            // Hide menu in order to smoothly turn on when maximize menu
+            $('#side-menu').hide();
+            // For smoothly turn on menu
+            setTimeout(
+                    function () {
+                        $('#side-menu').fadeIn(500);
+                    }, 100);
+        } else if ($('body').hasClass('fixed-sidebar')){
+            $('#side-menu').hide();
+            setTimeout(
+                    function () {
+                        $('#side-menu').fadeIn(500);
+                    }, 300);
+        } else {
+            // Remove all inline style from jquery fadeIn function to reset menu state
+            $('#side-menu').removeAttr('style');
+        }
+    }        
+</script>
